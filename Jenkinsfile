@@ -1,6 +1,8 @@
 pipeline {
     agent any
-
+    environment {
+      PATH = "$PATH:/tmp/workspace/flutter/bin"
+    } 
     stages {
         stage('Build and Dockerize') {
             steps {
