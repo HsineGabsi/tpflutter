@@ -4,6 +4,11 @@ pipeline {
       PATH = "$PATH:/tmp/workspace/flutter/bin"
     } 
     stages {
+        stage('Build') {
+            steps {
+                sh "flutter doctor -v"
+            }
+        }
         stage('Build and Dockerize') {
             steps {
                 dir('lib') {
