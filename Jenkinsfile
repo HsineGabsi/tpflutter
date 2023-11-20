@@ -2,6 +2,8 @@ pipeline {
     agent any
     environment {
       PATH = "$PATH:/home/slave/flutter/bin"
+      ANDROID_HOME=/home/slave/Android/Sdk
+
     } 
     stages {
         stage('Build') {
